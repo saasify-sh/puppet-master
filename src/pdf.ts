@@ -3,7 +3,6 @@ import {
   DirectNavigationOptions,
   PDFOptions,
   PDFFormat,
-  LayoutDimension,
   Viewport
 } from 'puppeteer-core'
 
@@ -46,7 +45,7 @@ import { ImageFormat, Margin, Rect } from './lib/types'
  *
  * @returns PDF as `application/pdf`.
  */
-export default async function getPdf(
+export default async function pdf(
   url: string,
   scale: number = 1,
   displayHeaderFooter: boolean = false,
@@ -56,8 +55,8 @@ export default async function getPdf(
   landscape: boolean = false,
   pageRanges: string = '',
   format: PDFFormat = 'Letter',
-  width?: LayoutDimension,
-  height?: LayoutDimension,
+  width?: number,
+  height?: number,
   margin?: Margin,
   preferCSSPageSize: boolean = false,
   gotoOptions?: DirectNavigationOptions,

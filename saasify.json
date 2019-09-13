@@ -59,6 +59,7 @@
   "saas": {
     "name": "Puppet Master",
     "heading": "Puppeteer as a Service",
-    "subheading": "Control headless Chrome via simple SaaS APIs!"
+    "subheading": "Control headless Chrome via simple SaaS APIs!",
+    "favicon": "./media/icon/favicon.ico"
   }
 }

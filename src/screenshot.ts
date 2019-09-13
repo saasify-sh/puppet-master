@@ -24,9 +24,9 @@ import { ImageFormat, Rect } from './lib/types'
  * - Use the `name` property from one of the built-in [devices](https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js).
  * - Overrides `viewport` and `userAgent`.
  *
- * @returns Image as either `image/png` or `image/jpeg` depending on the `type` parameter.
+ * @return Image as either `image/png` or `image/jpeg` depending on the `type` parameter.
  */
-export default async function getScreenshot(
+export default async function screenshot(
   url: string,
   type: ImageFormat = 'png',
   quality: number = 100,

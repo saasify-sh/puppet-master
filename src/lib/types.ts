@@ -1,6 +1,5 @@
 import {
   DirectNavigationOptions,
-  LayoutDimension,
   Viewport
 } from 'puppeteer-core'
 
@@ -15,13 +14,13 @@ export interface Rect {
 
 export interface Margin {
   /** Top margin. */
-  top?: LayoutDimension,
+  top?: number,
   /** Right margin. */
-  right?: LayoutDimension,
+  right?: number,
   /** Bottom margin. */
-  bottom?: LayoutDimension,
+  bottom?: number,
   /** Left margin. */
-  left?: LayoutDimension
+  left?: number
 }
 
 export interface CommonOptions {

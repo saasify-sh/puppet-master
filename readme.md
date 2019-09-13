@@ -17,10 +17,11 @@
 - **Usage based**: Pay only for what you use
 - **Focused**: We only do one thing and do it well
 - **Sensible defaults**: With lots of customizability
-- **Immutable deployments**: All updates are optional
+- **Immutable deployments**: All API updates are optional
 
 ## Contents
 
+TODO: table of contents
 
 
 ## Introduction
