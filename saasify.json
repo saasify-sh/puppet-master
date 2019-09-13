@@ -3,7 +3,7 @@
   "name": "puppet-master",
   "services": [
     {
-      "src": "screenshot.ts",
+      "src": "src/screenshot.ts",
       "examples": [
         {
           "name": "Basic",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "src": "pdf.ts",
+      "src": "src/pdf.ts",
       "examples": [
         {
           "name": "Basic",

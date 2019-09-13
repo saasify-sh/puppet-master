@@ -7,8 +7,8 @@ import {
   Viewport
 } from 'puppeteer-core'
 
-import { getPage } from './page'
-import { ImageFormat, Margin, Rect } from './types'
+import { getPage } from './lib/page'
+import { ImageFormat, Margin, Rect } from './lib/types'
 
 /**
  * @param url - URL to navigate page to. The url should include scheme, e.g. `https://`.
