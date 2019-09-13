@@ -9,3 +9,4 @@
   - section on debugging
   - also mention `https://saasify_puppet-master.saasify.sh`
 - [ ] add additional options from [capture-website](https://github.com/sindresorhus/capture-website)
+- [ ] add raw html content as alternative for url

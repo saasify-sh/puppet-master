@@ -8,6 +8,20 @@ import {
 import { getPage } from './page'
 import { ImageFormat, Rect } from './types'
 
+/**
+ * @param url - URL to navigate page to. The url should include scheme, e.g. `https://`.
+ * @param type - Specify screenshot type, can be either `jpeg` or `png`.
+ * @param quality - The quality of the image, between 0-100. Not applicable to `png` images.
+ * @param fullPage - When `true`, takes a screenshot of the full scrollable page.
+ * @param omitBackground -  Hides default white background and allows capturing screenshots with transparency.
+ * @param clip - An object which specifies clipping region of the page.
+ * @param gotoOptions - Customize the `Page.goto` navigation options.
+ * @param viewport - Set the browser window's viewport dimensions and/or resolution.
+ * @param userAgent - Set the browser's [user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent).
+ * @param emulateDevice - Make it look like the screenshot was taken on the specified device.
+ * - Use the `name` property from one of the built-in [devices](https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js).
+ * - Overrides `viewport` and `userAgent`.
+ */
 export default async function getScreenshot(
   url: string,
   type: ImageFormat = 'png',

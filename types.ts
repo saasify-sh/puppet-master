@@ -24,7 +24,6 @@ export interface Margin {
   left?: LayoutDimension
 }
 
-// TODO: add raw html content as alternative for url
 export interface CommonOptions {
   url: string
   gotoOptions?: DirectNavigationOptions

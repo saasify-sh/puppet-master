@@ -1,14 +1,27 @@
 # Puppet Master
 
-> [Puppeteer](https://pptr.dev) as a service.
+> [Puppeteer](https://pptr.dev) as a [service](https://puppet-master.sh).
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/saasify-sh/puppet-master/master/media/puppeteer-logo.png" alt="Puppeteer Logo" width="200" />
+  <a href="https://puppet-master.sh" title="Puppet Master">
+    <img src="https://raw.githubusercontent.com/saasify-sh/puppet-master/master/media/puppeteer-logo.png" alt="Puppeteer Logo" width="200" />
+  </a>
 </p>
 
 ## Features
 
-- Sensible defaults but lots of customizability
+- **Simple**: Quick to setup and integrate
+- **Standard**: Just HTTPS + JSON APIs
+- **Managed**: Hosted via serverless functions
+- **Scalable**: Scales up or down to any capacity
+- **Usage based**: Pay only for what you use
+- **Focused**: We only do one thing and do it well
+- **Sensible defaults**: With lots of customizability
+- **Immutable deployments**: All updates are optional
+
+## Contents
+
+
 
 ## Introduction
 
