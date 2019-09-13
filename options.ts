@@ -12,7 +12,7 @@ interface Options {
   headless: boolean
 }
 
-export async function getOptions(): Promise<Options> {
+export async function getLaunchOptions(): Promise<Options> {
   if (isDev) {
     return {
       args: [],

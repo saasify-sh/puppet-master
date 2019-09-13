@@ -1,3 +1,9 @@
+import {
+  DirectNavigationOptions,
+  LayoutDimension,
+  Viewport
+} from 'puppeteer-core'
+
 export type ImageFormat = 'png' | 'jpeg'
 
 export interface Rect {
@@ -5,4 +11,24 @@ export interface Rect {
   y: number
   width: number
   height: number
+}
+
+export interface Margin {
+  /** Top margin. */
+  top?: LayoutDimension,
+  /** Right margin. */
+  right?: LayoutDimension,
+  /** Bottom margin. */
+  bottom?: LayoutDimension,
+  /** Left margin. */
+  left?: LayoutDimension
+}
+
+// TODO: add raw html content as alternative for url
+export interface CommonOptions {
+  url: string
+  gotoOptions?: DirectNavigationOptions
+  viewport?: Viewport
+  userAgent?: string
+  emulateDevice?: string
 }

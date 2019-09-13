@@ -28,6 +28,32 @@
           "output": "github.jpg"
         }
       ]
+    },
+    {
+      "src": "pdf.ts",
+      "examples": [
+        {
+          "name": "Basic",
+          "input": {
+            "url": "https://producthunt.com"
+          },
+          "output": "producthunt.pdf"
+        },
+        {
+          "name": "Custom",
+          "input": {
+            "url": "https://producthunt.com",
+            "viewport": {
+              "width": 1920,
+              "height": 1080,
+              "deviceScaleFactor": 2
+            },
+            "displayHeaderFooter": true,
+            "format": "A0"
+          },
+          "output": "producthunt.pdf"
+        }
+      ]
     }
   ],
   "saas": {

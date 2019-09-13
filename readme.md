@@ -2,6 +2,10 @@
 
 > [Puppeteer](https://pptr.dev) as a service.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/saasify-sh/puppet-master/master/media/puppeteer-logo.png" alt="Puppeteer Logo" width="200" />
+</p>
+
 ## Features
 
 - Sensible defaults but lots of customizability
@@ -16,7 +20,17 @@ TODO
 
 Navigates to a page and captures a screenshot via Puppeteer's [Page.screenshot](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagescreenshotoptions).
 
-Returns a raw image in either `png` or `jpeg` format depending on the `type` parameter.
+All Puppeteer options are supported.
+
+Returns an image as either `image/png` or `image/jpeg` depending on the `type` parameter.
+
+### Pdf
+
+Navigates to a page and captures a PDF via Puppeteer's [Page.pdf](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagepdfoptions).
+
+All Puppeteer options are supported.
+
+Returns a PDF as `application/pdf`.
 
 ## Common Options
 
@@ -47,6 +61,10 @@ https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js
 ### Why are my screenshots blurry?
 
 Try setting [viewport.deviceScaleFactor](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetviewportviewport) to `2` to emulate a retina display.
+
+### Debugging
+
+TODO: run locally via `saasify dev` and non-headless in debug mode
 
 ## License
 
