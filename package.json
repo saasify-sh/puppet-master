@@ -6,6 +6,10 @@
   "repository": "saasify-sh/puppet-master",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "license": "MIT",
+  "scripts": {
+    "test": "saasify debug",
+    "deploy": "saasify deploy"
+  },
   "dependencies": {
     "chrome-aws-lambda": "^1.19.0",
     "fts-core": "^1.1.0",
