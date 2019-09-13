@@ -46,7 +46,7 @@ import { ImageFormat, Margin, Rect } from './lib/types'
  *
  * @returns PDF as `application/pdf`.
  */
-export default async function getScreenshot(
+export default async function getPdf(
   url: string,
   scale: number = 1,
   displayHeaderFooter: boolean = false,
