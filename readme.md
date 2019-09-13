@@ -2,7 +2,13 @@
 
 > [Puppeteer](https://pptr.dev) as a service.
 
+## Features
+
+- Sensible defaults but lots of customizability
+
 ## Introduction
+
+TODO
 
 ## Functions
 
@@ -14,14 +20,17 @@ Returns a raw image in either `png` or `jpeg` format depending on the `type` par
 
 ## Common Options
 
-In addition to the standard options, all functions optionally accept a set of common options.
+In addition to the standard parameters, all functions optionally accept a set of additional common options.
 
-- [viewport](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetviewportviewport) - Allows you to override the browser window's viewport size before performing any navigation.
-- [userAgent](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetuseragentuseragent) - Allows you to override the browser's [user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent).
-  - This can be useful to trick websites into displaying different content or styles based on an emulated device.
+- [viewport](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetviewportviewport) - Set the browser window's viewport dimensions and/or resolution.
+- [userAgent](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetuseragentuseragent) - Set the browser's [user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent).
+  - Useful to trick websites into displaying different content or styles based on an emulated device.
   - See also [avoiding detection](#avoiding-detection).
-- [gotoOptions](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagegotourl-options) - Allows you to customize the `Page.goto` navigation options.
-  - This can be useful when you need to customize behavior around when Puppeteer considers a page navigation "finished".
+- [gotoOptions](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagegotourl-options) - Customize the `Page.goto` navigation options.
+  - Useful when you need to customize behavior around when Puppeteer considers a page navigation "finished".
+- [emulateDevice](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pageemulateoptions) - Make it look like the screenshot was taken on the specified device.
+  - Use the `name` property from one of the built-in [devices](https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js).
+  - Overrides `viewport` and `userAgent`.
 
 ## Avoiding Detection
 

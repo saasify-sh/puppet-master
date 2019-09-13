@@ -1,6 +1,7 @@
 import { HttpResponse } from 'fts-core'
 import {
   launch,
+  devices,
   Page,
   DirectNavigationOptions,
   BinaryScreenShotOptions,
@@ -22,16 +23,28 @@ export default async function getScreenshot(
   clip?: Rect,
   gotoOptions?: DirectNavigationOptions,
   viewport?: Viewport,
-  userAgent?: string
+  userAgent?: string,
+  emulateDevice?: string
 ): Promise<HttpResponse> {
   const page = await getPage()
 
-  if (userAgent) {
-    await page.setUserAgent(userAgent)
-  }
+  if (emulateDevice) {
+    const device = devices[emulateDevice]
+    if (!device) {
+      const err = new Error(`Invalid device name [${emulateDevice}]`)
+      err.statusCode = 400
+      throw err
+    }
 
-  if (viewport) {
-    await page.setViewport(viewport)
+    await page.emulate(device)
+  } else {
+    if (userAgent) {
+      await page.setUserAgent(userAgent)
+    }
+
+    if (viewport) {
+      await page.setViewport(viewport)
+    }
   }
 
   await page.goto(url, gotoOptions)
