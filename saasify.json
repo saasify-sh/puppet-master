@@ -60,6 +60,7 @@
     "name": "Puppet Master",
     "heading": "Puppeteer as a Service",
     "subheading": "Control headless Chrome via simple SaaS APIs!",
+    "logo": "./media/icon/logo.svg",
     "favicon": "./media/icon/favicon.ico"
   }
 }
