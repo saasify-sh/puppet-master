@@ -11,6 +11,8 @@ import { getPage } from './lib/page'
 import { ImageFormat, Margin, Rect } from './lib/types'
 
 /**
+ * Navigates to a page and captures a PDF via Puppeteer's [Page.pdf](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagepdfoptions).
+ *
  * @param url - URL to navigate page to. The url should include scheme, e.g. `https://`.
  * @param scale - Scale of the webpage rendering.
  * @param displayHeaderFooter - Display header and footer.
@@ -41,6 +43,8 @@ import { ImageFormat, Margin, Rect } from './lib/types'
  * @param emulateDevice - Make it look like the screenshot was taken on the specified device.
  * - Use the `name` property from one of the built-in [devices](https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js).
  * - Overrides `viewport` and `userAgent`.
+ *
+ * @returns PDF as `application/pdf`.
  */
 export default async function getScreenshot(
   url: string,
