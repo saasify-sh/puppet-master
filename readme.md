@@ -11,7 +11,7 @@
 ## Features
 
 - **Simple**: Quick to setup and integrate
-- **Standard**: Just HTTPS + JSON APIs
+- **Standard**: Just HTTPS + JSON
 - **Managed**: Hosted via serverless functions
 - **Scalable**: Scales up or down to any capacity
 - **Usage based**: Pay only for what you use
@@ -46,7 +46,7 @@ All Puppeteer options are supported.
 
 Returns a PDF as `application/pdf`.
 
-## Common Options
+### Common Options
 
 In addition to the standard parameters, all functions optionally accept a set of additional common options.
 
