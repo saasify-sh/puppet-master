@@ -61,6 +61,6 @@
     "heading": "Puppeteer as a Service",
     "subheading": "Control headless Chrome via simple SaaS APIs!",
     "logo": "./media/logo.svg",
-    "favicon": "./media/icon/favicon.ico"
+    "favicon": "./media/favicon.ico"
   }
 }
