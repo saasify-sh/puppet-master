@@ -21,8 +21,21 @@
 
 ## Contents
 
-TODO: table of contents
+<!-- toc -->
 
+- [Introduction](#introduction)
+- [Functions](#functions)
+  * [Screenshot](#screenshot)
+  * [Pdf](#pdf)
+  * [Common Options](#common-options)
+- [Avoiding Detection](#avoiding-detection)
+- [FAQ](#faq)
+  * [Where can I find some example user agent strings?](#where-can-i-find-some-example-user-agent-strings)
+  * [Why are my screenshots blurry?](#why-are-my-screenshots-blurry)
+  * [Debugging](#debugging)
+- [License](#license)
+
+<!-- tocstop -->
 
 ## Introduction
 

@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "test": "saasify debug",
-    "deploy": "saasify deploy"
+    "deploy": "saasify deploy",
+    "toc": "markdown-toc -i readme.md"
   },
   "dependencies": {
     "chrome-aws-lambda": "^1.19.0",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.6.9",
-    "@types/puppeteer-core": "^1.9.0"
+    "@types/puppeteer-core": "^1.9.0",
+    "markdown-toc": "^1.2.0"
   }
 }
