@@ -30,9 +30,10 @@
 - [FAQ](#faq)
   * [Why are my screenshots blurry?](#why-are-my-screenshots-blurry)
   * [How is this project different from other alternatives?](#how-is-this-project-different-from-other-alternatives)
-  * [The functionality I need is missing from this product.](#the-functionality-i-need-is-missing-from-this-product)
+  * [The functionality I need is missing.](#the-functionality-i-need-is-missing)
+  * [How do subscriptions work?](#how-do-subscriptions-work)
   * [This project is great! How can I help out?](#this-project-is-great-how-can-i-help-out)
-  * [Is there any way I can debug issues with the API?](#is-there-any-way-i-can-debug-issues-with-the-api)
+  * [How can I debug potential issues with the API?](#how-can-i-debug-potential-issues-with-the-api)
 - [License](#license)
 
 <!-- tocstop -->
@@ -100,11 +101,15 @@ It's our hope that by greatly simplifying and automating the process of launchin
 
 Puppet Master is therefore a SaaS product that is fully generated from the source code in this repository. If you know how to create an open source TypeScript project like this one, you're already 95% of your way towards creating your own monetizable SaaS product!
 
-### The functionality I need is missing from this product.
+### The functionality I need is missing.
 
-We're actively looking for feedback and feature suggestions. Please [contact us](mailto:support@saasify.sh) or open an issue on this repo. Thanks!
+We're actively looking for feedback and feature suggestions.
 
-### How does billing work?
+Please [contact us](mailto:support@saasify.sh) or open an issue on this repo.
+
+Thanks!
+
+### How do subscriptions work?
 
 All APIs come with a free public tier that is rate-limited so you can test things out before signing up for a subscription.
 
@@ -124,7 +129,7 @@ See [pricing](/pricing) for more details.
 
 Collaboration is what makes open source truly powerful! If you're interested in working on Puppet Master or have an idea for your own Saasify product, please [contact us](mailto:info@saasify.sh). Thanks!
 
-### Is there any way I can debug issues with the API?
+### How can I debug potential issues with the API?
 
 If your API calls are not working or returning unexpected results, the best way to troubleshoot is to try and reproduce the issue by running the project locally.
 

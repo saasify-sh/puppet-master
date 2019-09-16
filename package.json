@@ -18,22 +18,15 @@
     "headless",
     "screenshot",
     "pdf",
-    "remote",
     "serverless",
     "saas",
     "faas",
     "api",
     "browserless",
-    "checkly",
-    "awesome",
     "puppet",
-    "master",
-    "saasify",
-    "oss",
     "open source",
-    "google",
     "lambda",
-    "aws"
+    "capture-website"
   ],
   "dependencies": {
     "chrome-aws-lambda": "^1.19.0",
