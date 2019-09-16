@@ -28,9 +28,11 @@
   * [Pdf](#pdf)
   * [Common Options](#common-options)
 - [FAQ](#faq)
-  * [Where can I find some example user agent strings?](#where-can-i-find-some-example-user-agent-strings)
   * [Why are my screenshots blurry?](#why-are-my-screenshots-blurry)
-  * [Debugging](#debugging)
+  * [How is this project different from other alternatives?](#how-is-this-project-different-from-other-alternatives)
+  * [The functionality I need is missing from this product.](#the-functionality-i-need-is-missing-from-this-product)
+  * [This project is great! How can I help out?](#this-project-is-great-how-can-i-help-out)
+  * [Is there any way I can debug issues with the API?](#is-there-any-way-i-can-debug-issues-with-the-api)
 - [License](#license)
 
 <!-- tocstop -->
@@ -74,15 +76,19 @@ In addition to the standard parameters, all functions optionally accept a set of
 
 ## FAQ
 
+### Why are my screenshots blurry?
+
+Try setting [viewport.deviceScaleFactor](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetviewportviewport) to `2` to emulate a retina display.
+
 ### How is this project different from other alternatives?
 
-There are
+The differences can be broken down into two areas:
 
 **Functionality**
 
-- scale via serverless functions
-- usage based
-- don't have to deal with servers or async task queues
+- We use serverless functions to provide maximum scalability while minimizing cost.
+- This also means that you only pay for what you actually use.
+- You could set this up yourself, but headless chrome is a resource hog and who wants to setup and manage another async task queue?
 
 **Philisophy**
 
@@ -90,20 +96,33 @@ The core motivation behind this project lies in trying to tackle the problem of 
 
 Towards that end, every aspect of this SaaS product aside from the core functionality was generated automatically via [Saasify](https://saasify.sh), the Shopify for SaaS. That includes the template-based marketing website, OpenAPI-based API docs, serverless function hosting, user account management, usage-based billing integration, legal docs, and support.
 
-It's our hope that by greatly simplifying and automating the process of launching simple, focused SaaS APIs, open source authors will be much more inclined to monetize their work based on usage and impact while still holding true to the underlying nature of OSS.
+It's our hope that by greatly simplifying and automating the process of launching SaaS APIs, open source authors will be much more inclined to monetize their work and help to sustain their passion while still holding true to the underlying nature of OSS.
 
-Puppet Master is therefore a SaaS product that is fully generated from the source code in this repository. If you know how to create an open source TypeScript project like this one, you're already 95% of your way towards creating your first monetizable SaaS product!
+Puppet Master is therefore a SaaS product that is fully generated from the source code in this repository. If you know how to create an open source TypeScript project like this one, you're already 95% of your way towards creating your own monetizable SaaS product!
 
-###
+### The functionality I need is missing from this product.
 
-### Why are my screenshots blurry?
+We're actively looking for feedback and feature suggestions. Please [contact us](mailto:support@saasify.sh) or open an issue on this repo. Thanks!
 
-Try setting [viewport.deviceScaleFactor](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetviewportviewport) to `2` to emulate a retina display.
+### How does billing work?
 
-### Where can I find some example user agent strings?
+All APIs come with a free public tier that is rate-limited so you can test things out before signing up for a subscription.
 
-TODO
-https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js
+Saasify uses [Stripe](https://stripe.com) to securely handle all payments, subscriptions, and invoices.
+
+We use usage-based, metered subscriptions that charge fractions of a cent depending on three factors:
+
+- Number of authenticated API calls
+- Aggregate compute time
+- Bandwidth in / out
+
+Signing up for a subscription starts a weekly billing cycle. **Note that you will only be charged for what you use!**
+
+See [pricing](/pricing) for more details.
+
+### This project is great! How can I help out?
+
+Collaboration is what makes open source truly powerful! If you're interested in working on Puppet Master or have an idea for your own Saasify product, please [contact us](mailto:info@saasify.sh). Thanks!
 
 ### Is there any way I can debug issues with the API?
 
