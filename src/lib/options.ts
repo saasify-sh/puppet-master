@@ -1,6 +1,7 @@
 import chrome = require('chrome-aws-lambda')
 
 const isDev = process.env.NOW_REGION === 'dev1'
+const isDebug = isDev && process.env.PUPPET_MASTER_DEBUG
 
 const exePath = process.platform === 'win32'
   ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
@@ -14,10 +15,17 @@ interface Options {
 
 export async function getLaunchOptions(): Promise<Options> {
   if (isDev) {
+    const debugParams = isDebug ? {
+      headless: false,
+      slowMo: 1000
+    } : {
+      headless: true
+    }
+
     return {
       args: [],
       executablePath: exePath,
-      headless: true
+      ...debugParams
     }
   } else {
     return {

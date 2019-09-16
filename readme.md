@@ -13,10 +13,9 @@
 - **Simple**: Quick to setup and integrate
 - **Standard**: Just HTTPS + JSON
 - **Managed**: Hosted via serverless functions
-- **Scalable**: Scales up or down to any capacity
+- **Scalable**: Scales to any capacity
 - **Usage based**: Pay only for what you use
 - **Focused**: We only do one thing and do it well
-- **Sensible defaults**: With lots of customizability
 - **Immutable deployments**: All API updates are optional
 
 ## Contents
@@ -28,7 +27,6 @@
   * [Screenshot](#screenshot)
   * [Pdf](#pdf)
   * [Common Options](#common-options)
-- [Avoiding Detection](#avoiding-detection)
 - [FAQ](#faq)
   * [Where can I find some example user agent strings?](#where-can-i-find-some-example-user-agent-strings)
   * [Why are my screenshots blurry?](#why-are-my-screenshots-blurry)
@@ -39,7 +37,9 @@
 
 ## Introduction
 
-TODO
+Puppet Master provides hosted, serverless SaaS APIs for controlling headless chrome in the cloud.
+
+Our goal is to make it really simple for developers to scale automated browser workflows via [Puppeteer](https://pptr.dev).
 
 ## Functions
 
@@ -66,33 +66,61 @@ In addition to the standard parameters, all functions optionally accept a set of
 - [viewport](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetviewportviewport) - Set the browser window's viewport dimensions and/or resolution.
 - [userAgent](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetuseragentuseragent) - Set the browser's [user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent).
   - Useful to trick websites into displaying different content or styles based on an emulated device.
-  - See also [avoiding detection](#avoiding-detection).
 - [gotoOptions](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagegotourl-options) - Customize the `Page.goto` navigation options.
   - Useful when you need to customize behavior around when Puppeteer considers a page navigation "finished".
 - [emulateDevice](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pageemulateoptions) - Make it look like the screenshot was taken on the specified device.
   - Use the `name` property from one of the built-in [devices](https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js).
   - Overrides `viewport` and `userAgent`.
 
-## Avoiding Detection
-
-TODO
-- Some websites go to great lengths to
-
 ## FAQ
+
+### How is this project different from other alternatives?
+
+There are
+
+**Functionality**
+
+- scale via serverless functions
+- usage based
+- don't have to deal with servers or async task queues
+
+**Philisophy**
+
+The core motivation behind this project lies in trying to tackle the problem of open source sustainability.
+
+Towards that end, every aspect of this SaaS product aside from the core functionality was generated automatically via [Saasify](https://saasify.sh), the Shopify for SaaS. That includes the template-based marketing website, OpenAPI-based API docs, serverless function hosting, user account management, usage-based billing integration, legal docs, and support.
+
+It's our hope that by greatly simplifying and automating the process of launching simple, focused SaaS APIs, open source authors will be much more inclined to monetize their work based on usage and impact while still holding true to the underlying nature of OSS.
+
+Puppet Master is therefore a SaaS product that is fully generated from the source code in this repository. If you know how to create an open source TypeScript project like this one, you're already 95% of your way towards creating your first monetizable SaaS product!
+
+###
+
+### Why are my screenshots blurry?
+
+Try setting [viewport.deviceScaleFactor](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetviewportviewport) to `2` to emulate a retina display.
 
 ### Where can I find some example user agent strings?
 
 TODO
 https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js
 
-### Why are my screenshots blurry?
+### Is there any way I can debug issues with the API?
 
-Try setting [viewport.deviceScaleFactor](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagesetviewportviewport) to `2` to emulate a retina display.
+If your API calls are not working or returning unexpected results, the best way to troubleshoot is to try and reproduce the issue by running the project locally.
 
-### Debugging
+- Clone this repository
+- Install `saasify` globally via `npm install -g saasify`
+- Run `saasify dev` at the repo root specifying an additional environment variable `PUPPET_MASTER_DEBUG`
 
-TODO: run locally via `saasify dev` and non-headless in debug mode
+```
+PUPPET_MASTER_DEBUG=1 saasify dev
+```
+
+This will run the deployment locally with a non-headless browser and `slowMo` set to `1000`.
+
+Then just change the URL you're calling to be the corresponding `localhost` URL and investigate the issue.
 
 ## License
 
-MIT © [Travis Fischer](https://transitivebullsh.it)
+MIT © [Saasify](https://saasify.sh)
