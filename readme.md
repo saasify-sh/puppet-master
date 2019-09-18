@@ -90,6 +90,7 @@ The differences can be broken down into two areas:
 - We use serverless functions to provide maximum scalability while minimizing cost.
 - This also means that you only pay for what you actually use.
 - You could set this up yourself, but headless chrome is a resource hog and who wants to setup and manage another async task queue?
+- We also allow you to run functions locally which is essential for debugging.
 
 **Philisophy**
 
@@ -121,17 +122,17 @@ We use usage-based, metered subscriptions that charge fractions of a cent depend
 - Aggregate compute time
 - Bandwidth in / out
 
-Signing up for a subscription starts a weekly billing cycle. **Note that you will only be charged for what you use!**
+Signing up for a subscription starts a weekly billing cycle. Note that you will only be charged for what you use.
 
 See [pricing](/pricing) for more details.
 
 ### This project is great! How can I help out?
 
-Collaboration is what makes open source truly powerful! If you're interested in working on Puppet Master or have an idea for your own Saasify product, please [contact us](mailto:info@saasify.sh). Thanks!
+Collaboration is what makes open source truly powerful! If you're interested in working on Puppet Master or have an idea for your own Saasify product, please [contact us](mailto:info@saasify.sh) to learn more. Thanks!
 
 ### How can I debug potential issues with the API?
 
-If your API calls are not working or returning unexpected results, the best way to troubleshoot is to try and reproduce the issue by running the project locally.
+If your API calls are not working or returning unexpected results, the best way to troubleshoot is to try and reproduce your issue by running the project locally.
 
 - Clone this repository
 - Install `saasify` globally via `npm install -g saasify`
