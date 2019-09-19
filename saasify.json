@@ -59,6 +59,7 @@
     "name": "Puppet Master",
     "heading": "Puppeteer as a Service",
     "subheading": "Control headless Chrome via a simple SaaS API!",
+    "repo": "https://github.com/saasify-sh/puppet-master",
     "logo": "./media/logo.svg",
     "favicon": "./media/favicon.ico"
   }
