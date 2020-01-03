@@ -1,5 +1,6 @@
 {
   "name": "puppet-master",
+  "alias": "puppet-master.sh",
   "services": [
     {
       "src": "src/screenshot.ts",
